@@ -1,0 +1,100 @@
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
+  margin: 0px;
+  background-color: rgb(219, 230, 206);
+  color: white;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  margin-right: 50px;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  margin-left: 1%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 50px;
+  top: 7px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: 0px;
+  margin-right: 1%;
+}
+
+.all-skill:hover {
+  color: red;
+}
+
+.all-skill {
+  margin: 0px;
+}
+
+#title {
+  font-size: 64px;
+  text-align: center;
+}
+
+.bx {
+  font-size: 60px;
+  color: red;
+}
+
+.center {
+  text-align: center;
+}
+
+.picture {
+  width: 100%;
+  height: 93.5vh;
+  background-image: url("../assets/3239439.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  z-index: 2;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.logo:hover {
+  transform: scale(1.5);
+}
+
+.name {
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  width: 400px;
+  background-color: #eff5fb;
+  border-radius: 10px;
+}
+.name .height-name {
+  height: 80px;
+}
+
+/*# sourceMappingURL=style.css.map */
