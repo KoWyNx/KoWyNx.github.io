@@ -1,8 +1,8 @@
 var slogan = document.querySelector('#title')
 
 let word = 'Développeur'
-let dev =  'front-end  '
-let back = 'back-end   '
+let dev =  'Front-end  '
+let back = 'Back-end   '
 let full = 'Full-stack '
 let totalDuration = 100 * word.length + 500;
 
