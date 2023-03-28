@@ -110,3 +110,63 @@ cursor: pointer;
     }
     
 }
+
+.title{
+
+text-align: justify;
+color: black;
+margin-left: 5%;
+margin-right: 5%;
+
+}
+
+.competence-bg{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .image{
+        width: 40%;
+
+        &:hover {
+
+            transform: scale(1.1);
+        
+        }
+    }
+}
+
+.logo-competence{
+    width: 80%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.logo-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.images{
+    width: 8%;
+
+    &:hover {
+
+        transform: scale(1.2);
+
+    }
+}
+
+.title-competence{
+    background-color: black;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    padding-left: 5%;
+}
