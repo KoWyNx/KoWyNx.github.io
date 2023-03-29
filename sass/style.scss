@@ -157,7 +157,8 @@ margin-right: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    
 }
 
 .images{
@@ -165,14 +166,30 @@ margin-right: 5%;
 
     &:hover {
 
-        transform: scale(1.2);
+        transform: scale(1.1);
 
     }
 }
 
 .title-competence{
     background-color: black;
+    color: white;
     padding-top: 20px;
     margin-bottom: 0px;
     padding-left: 5%;
+}
+
+.h5-text{
+    margin-top: 10px;
+    color: white;
+}
+
+.php-image{
+    width: 60%;
+
+    &:hover {
+
+        transform: scale(1.1);
+
+    }
 }
