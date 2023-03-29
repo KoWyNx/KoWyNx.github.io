@@ -12,20 +12,48 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Libre+Franklin:ital@1&display=swap"
       rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous" />
   </head>
 
   <body>
-    <header class="flex">
+    <header>
       <div class="presentation">
         <img class="logo" src="../assets/FB.png" alt="" />
       </div>
-
-      <div class="skill">
-        <a href="#a-propos" class="all-skill">A propos</a>
-        <a href="#competence" class="all-skill">Compétence</a>
-        <a href="" class="all-skill">Expérience</a>
-        <a href="" class="all-skill">Contact</a>
-      </div>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid justify-content-end">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-end" aria-current="page" href="#">A propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-end" href="#">Compétence</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-end" href="#">Expérience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-end">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <div id="a-propos" class="picture">
@@ -47,7 +75,7 @@
       </p>
       <p>
         Sans m'en rendre compte j'ai toujours grandi dans le milieu numérique avec un père informaticien. Cette année je
-        me suis lancer ! j'ai fait une formation développeur web et web mobile avec M2i. j'ai pu me rendre compte que
+        me suis lancé ! j'ai fait une formation développeur web et web mobile avec M2i. j'ai pu me rendre compte que
         j'aimais vraiment le développement web et web mobile et je voudrais continuer ma lancée sur une CDA (concepteur
         développeur d'application).
       </p>
@@ -55,7 +83,6 @@
 
     <h2 class="title-competence">Compétence</h2>
     <div class="competence-bg" id="competence">
-      
       <div class="logo-competence">
         <div class="logo-flex">
           <img class="image" src="/assets/html-1.svg" alt="" />
@@ -100,5 +127,13 @@
     </div>
 
     <script src="../js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+      integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+      crossorigin="anonymous"></script>
   </body>
 </html>
