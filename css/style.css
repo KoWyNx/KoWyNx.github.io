@@ -122,6 +122,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  opacity: 0;
+  animation: appear 2s ease-in-out forwards;
 }
 
 .images {
@@ -149,6 +151,23 @@ body {
 }
 .php-image:hover {
   transform: scale(1.1);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-in-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

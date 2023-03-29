@@ -47,3 +47,32 @@ for (let index in word) {
            
 }
 
+
+
+
+
+const options = {
+    rootMargin: '0px',
+    threshold: 0.2
+  }
+  
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible')
+      } else {
+        entry.target.classList.remove('visible')
+      }
+    })
+  }
+  
+  const observer = new IntersectionObserver(callback, options)
+  const competence = document.querySelector('#competence')
+  observer.observe(competence)
+  
+
+
+
+
+
+
