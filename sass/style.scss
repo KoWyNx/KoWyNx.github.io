@@ -125,6 +125,25 @@ margin-right: 5%;
 
 }
 
+.image-flex{
+    display: flex;
+}
+
+.description{
+    width: 50%;
+}
+
+.matete{
+    background-image: url('../assets/thumbnail_IMG_9878.jpg');
+background-position: -250px -200px;
+object-fit: contain;
+    width: 50%;
+   
+    
+}
+
+
+
 .competence-bg{
     background-color: black;
     display: flex;
@@ -174,4 +193,9 @@ margin-right: 5%;
     padding-top: 20px;
     margin-bottom: 0px;
     padding-left: 5%;
+}
+
+.reveal{
+    background-color: black;
+    height: 100%;
 }
