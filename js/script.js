@@ -38,6 +38,27 @@ for (let index in word) {
   }, 6000 + duration * (index + 1));
 }
 
+
+
+
+
+const options = {
+    rootMargin: '0px',
+    threshold: 0.2
+  }
+  
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible')
+      } else {
+        entry.target.classList.remove('visible')
+      }
+    })
+  }
+  
+
+
 let competence = document.querySelector('#competence');
 ScrollReveal().reveal(competence, {
   reset: true,
