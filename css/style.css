@@ -118,15 +118,22 @@ body {
   display: flex;
 }
 
-.description {
-  width: 50%;
-}
-
 .matete {
   background-image: url("../assets/thumbnail_IMG_9878.jpg");
-  background-position: -250px -200;
+  background-position: -330px -20px;
+  background-size: 120%;
   object-fit: contain;
-  width: 50%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-right: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.description {
+  margin-top: 75px;
+  text-align: justify;
 }
 
 .competence-bg {
@@ -184,6 +191,20 @@ h5 {
 .reveal {
   background-color: black;
   height: 100%;
+}
+
+.experience {
+  padding-top: 20px;
+  margin-bottom: 0px;
+  padding-left: 5%;
+  color: black;
+}
+
+.project {
+  padding-top: 20px;
+  margin-bottom: 0px;
+  padding-left: 5%;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
