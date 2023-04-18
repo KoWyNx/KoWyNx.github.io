@@ -175,8 +175,17 @@ object-fit: contain;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 10px;
+    height: 100%;
+    color: white;
 }
+
+h5{
+    margin: 0px;
+    padding: 0px;
+}
+
 
 .images{
     width: 8%;
@@ -193,6 +202,7 @@ object-fit: contain;
     padding-top: 20px;
     margin-bottom: 0px;
     padding-left: 5%;
+    color: white;
 }
 
 .reveal{
