@@ -511,35 +511,33 @@
       <div class="container container--narrow">
         <h2 class="section-title">Me <span class="accent">contacter</span></h2>
         <p class="contact-sub">Une opportunité ? Un projet ? Envoie-moi un message, je réponds sous 24h.</p>
-        <div data-fs-success class="form-success" style="display:none">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
-          <p>Message envoyé ! Je te réponds très vite.</p>
+        <div id="formSuccess" class="form-success" style="display:none">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="48" height="48"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          <p>Message envoyé !</p>
+          <span>Merci, je te réponds dans les plus brefs délais.</span>
         </div>
-        <div data-fs-error class="form-error-global"></div>
 
         <form class="contact-form" id="contactForm">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Nom</label>
-              <input type="text" id="name" name="name" placeholder="Jean Dupont" required data-fs-field />
-              <span data-fs-error="name" class="field-error"></span>
+              <input type="text" id="name" name="name" placeholder="Jean Dupont" required />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="jean@exemple.com" required data-fs-field />
-              <span data-fs-error="email" class="field-error"></span>
+              <input type="email" id="email" name="email" placeholder="jean@exemple.com" required />
             </div>
           </div>
           <div class="form-group">
             <label for="subject">Sujet</label>
-            <input type="text" id="subject" name="subject" placeholder="Opportunité / Collaboration / Question" data-fs-field />
+            <input type="text" id="subject" name="subject" placeholder="Opportunité / Collaboration / Question" />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Bonjour Fares, ..." required data-fs-field></textarea>
-            <span data-fs-error="message" class="field-error"></span>
+            <textarea id="message" name="message" rows="5" placeholder="Bonjour Fares, ..." required></textarea>
           </div>
-          <button type="submit" class="btn-primary btn-full" data-fs-submit-btn>Envoyer le message</button>
+          <p id="formError" class="field-error" style="display:none;text-align:center">Une erreur s'est produite, réessaie ou écris-moi directement par email.</p>
+          <button type="submit" class="btn-primary btn-full" id="formBtn">Envoyer le message</button>
         </form>
         <div class="contact-alts">
           <a href="mailto:fberrani@hotmail.fr" class="contact-link">
@@ -562,10 +560,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script>
-      window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-      formspree('initForm', { formElement: '#contactForm', formId: 'mlgaraja' });
-    </script>
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   </body>
 </html>

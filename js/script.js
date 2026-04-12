@@ -82,3 +82,39 @@
   sections.forEach((s) => obs.observe(s));
 })();
 
+/* ═══════════════════════ CONTACT FORM ═══════════════════════ */
+(function () {
+  const form = document.getElementById('contactForm');
+  const btn = document.getElementById('formBtn');
+  const success = document.getElementById('formSuccess');
+  const error = document.getElementById('formError');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    btn.textContent = 'Envoi en cours…';
+    btn.disabled = true;
+    error.style.display = 'none';
+
+    try {
+      const res = await fetch('https://formspree.io/f/mlgaraja', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'flex';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        throw new Error('server');
+      }
+    } catch {
+      error.style.display = 'block';
+      btn.textContent = 'Envoyer le message';
+      btn.disabled = false;
+    }
+  });
+})();
+

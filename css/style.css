@@ -532,7 +532,8 @@ button { cursor: pointer; font-family: inherit; }
   color: #22c55e;
   margin-bottom: 24px;
 }
-.form-success p { color: var(--text); font-size: 1.05rem; font-weight: 500; margin: 0; }
+.form-success p { color: var(--text); font-size: 1.1rem; font-weight: 600; margin: 0; }
+.form-success span { color: var(--text-muted); font-size: 0.9rem; }
 
 .form-error-global:not(:empty) {
   padding: 12px 16px;
