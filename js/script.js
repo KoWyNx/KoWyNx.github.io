@@ -1,69 +1,84 @@
-var slogan = document.querySelector('#title');
+/* ═══════════════════════ TYPING ANIMATION ═══════════════════════ */
+(function () {
+  const el = document.getElementById('typed');
+  if (!el) return;
 
-let word = 'Développeur';
-let dev = 'Front-end  ';
-let back = 'Back-end   ';
-let full = 'Full-stack ';
-let totalDuration = 100 * word.length + 500;
+  const words = ['.NET Developer', 'Vue.js Developer', 'Full-stack Dev', 'C# Enthusiast'];
+  let wi = 0, ci = 0, deleting = false;
+  const SPEED_TYPE = 80, SPEED_DEL = 45, PAUSE = 1800;
 
-for (let index in word) {
-  index = parseInt(index);
-  let duration = 100;
-  let trye = 2000;
+  function tick() {
+    const word = words[wi];
+    el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
 
-  setTimeout(function () {
-    console.log(slogan.textContent[index + 5]);
-    slogan.textContent += dev[index];
-    slogan.style.color = '#50B4E2';
-  }, duration * (index + 1));
-
-  setTimeout(function () {
-    slogan.textContent = dev.substr(0, dev.length - (index + 1));
-  }, totalDuration + duration * (index + 1));
-
-  setTimeout(function () {
-    console.log(slogan.textContent[index + 5]);
-    slogan.textContent += back[index];
-    slogan.style.color = '#1D84B5';
-  }, 3000 + duration * (index + 1));
-
-  setTimeout(function () {
-    slogan.textContent = back.substr(0, back.length - (index + 1));
-  }, 4500 + duration * (index + 1));
-
-  setTimeout(function () {
-    console.log(slogan.textContent[index + 5]);
-    slogan.textContent += full[index];
-    slogan.style.color = '#18548C';
-  }, 6000 + duration * (index + 1));
-}
-
-
-
-
-
-const options = {
-    rootMargin: '0px',
-    threshold: 0.2
+    if (!deleting && ci > word.length) {
+      deleting = true;
+      setTimeout(tick, PAUSE);
+      return;
+    }
+    if (deleting && ci < 0) {
+      deleting = false;
+      ci = 0;
+      wi = (wi + 1) % words.length;
+    }
+    setTimeout(tick, deleting ? SPEED_DEL : SPEED_TYPE);
   }
-  
-  const callback = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible')
-      } else {
-        entry.target.classList.remove('visible')
-      }
-    })
-  }
-  
+  tick();
+})();
 
+/* ═══════════════════════ SCROLL REVEAL ═══════════════════════ */
+(function () {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
 
-let competence = document.querySelector('#competence');
-ScrollReveal().reveal(competence, {
-  reset: true,
-  delay: 100,
-  duration: 2000,
-  origin: 'left',
-  distance: '300px',
-});
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = `${(i % 4) * 80}ms`;
+    observer.observe(el);
+  });
+})();
+
+/* ═══════════════════════ MOBILE NAV TOGGLE ═══════════════════════ */
+(function () {
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  if (!toggle || !links) return;
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('open');
+  });
+
+  links.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => links.classList.remove('open'));
+  });
+})();
+
+/* ═══════════════════════ ACTIVE NAV LINK ON SCROLL ═══════════════════════ */
+(function () {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('#navLinks a[href^="#"]');
+
+  const obs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          navLinks.forEach((a) => a.classList.remove('active'));
+          const active = document.querySelector(`#navLinks a[href="#${e.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    },
+    { rootMargin: '-40% 0px -55% 0px' }
+  );
+
+  sections.forEach((s) => obs.observe(s));
+})();
+

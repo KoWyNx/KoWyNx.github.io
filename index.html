@@ -1,172 +1,571 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fares Berrani</title>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <meta name="description" content="Fares Berrani — Développeur Full-Stack .NET &amp; Vue.js · Lille" />
+    <title>Fares Berrani · Développeur</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Libre+Franklin:ital@1&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
-      crossorigin="anonymous" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <header>
-      <div class="presentation">
-        <img class="logo" src="../assets/FB.png" alt="" />
+
+    <!-- ═══════════════════════ NAV ═══════════════════════ -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">FB<span class="dot">.</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#formation">Formation</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact" class="btn-nav">Contact</a></li>
+        </ul>
       </div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid justify-content-end">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link d-flex justify-content-end" aria-current="page" href="#a-propos">A propos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex justify-content-end" href="#competence">Compétence</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex justify-content-end" href="#">Expérience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex justify-content-end">Contact</a>
-              </li>
+    </nav>
+
+    <!-- ═══════════════════════ HERO ═══════════════════════ -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Bonjour, je suis</p>
+        <h1 class="hero-name">Fares Berrani</h1>
+        <h2 class="hero-title">Développeur <span id="typed"></span><span class="cursor">|</span></h2>
+        <p class="hero-sub">
+          Développeur Full-Stack basé à Lille · Passionné de tech &amp; constructeur de drones FPV
+        </p>
+        <div class="hero-stack">
+          <span class="stack-badge stack-badge--main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt="" />.NET Core</span>
+          <span class="stack-badge stack-badge--main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="" />C#</span>
+          <span class="stack-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="" />Vue.js</span>
+          <span class="stack-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="" />SQL Server</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">Voir mes projets</a>
+          <a href="#contact" class="btn-secondary">Me contacter</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/KoWyNx" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/faresber/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-ring">
+          <img src="assets/thumbnail_IMG_9878.jpg" alt="Fares Berrani" class="avatar-img" />
+        </div>
+        <div class="blob"></div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Défiler">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </section>
+
+    <!-- ═══════════════════════ À PROPOS ═══════════════════════ -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">À <span class="accent">propos</span></h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Développeur <strong>Full-Stack</strong> de 26 ans basé à <strong>Lille</strong>. Je construis
+              des applications web performantes avec <strong>C# / ASP.NET Core</strong> côté serveur
+              et des interfaces modernes avec <strong>Vue.js</strong> côté client.
+              Actuellement en CDI chez <strong>Goweb</strong> en tant que développeur Full-Stack.
+            </p>
+            <p>
+              Venu de l'hydraulique industrielle, j'ai toujours été passionné par le numérique.
+              Constructeur de drones FPV, passionné de sport automobile et de VTT — j'aime
+              comprendre comment les choses fonctionnent et les améliorer.
+              Titulaire d'une <strong>CDA (Concepteur Développeur d'Application)</strong>
+              obtenu à 2I TECH Lille et du titre <strong>DWWM</strong> chez M2i Lille.
+            </p>
+            <div class="about-facts">
+              <div class="fact">
+                <span class="fact-value">3+</span>
+                <span class="fact-label">Ans d'expérience</span>
+              </div>
+              <div class="fact">
+                <span class="fact-value">5+</span>
+                <span class="fact-label">Projets livrés</span>
+              </div>
+              <div class="fact">
+                <span class="fact-value">2</span>
+                <span class="fact-label">Titres pro</span>
+              </div>
+            </div>
+            <a href="assets/CV_Fares_Berrani.pdf" class="btn-primary" download>
+              Télécharger mon CV
+            </a>
+          </div>
+          <div class="about-tags reveal">
+            <h3>Centres d'intérêts</h3>
+            <ul class="tag-list">
+              <li>Drone FPV (construction &amp; pilotage)</li>
+              <li>VTT</li>
+              <li>Sport automobile</li>
+              <li>Passionné d'informatique</li>
+              <li>Esprit curieux</li>
+              <li>Anglais professionnel</li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </section>
 
-    <div>
-      <div class="picture">
-        <div class="name">
-          <h1>Berrani Fares</h1>
-          <h2>Développeur</h2>
-          <div id="title" class="height-name"></div>
+    <!-- ═══════════════════════ COMPÉTENCES ═══════════════════════ -->
+    <section id="skills" class="section section-dark">
+      <div class="container">
+        <h2 class="section-title">Mes <span class="accent">compétences</span></h2>
+        <div class="skills-grid">
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title">Back-end</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
+                <span>C# / .NET Core</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+                <span>PHP</span>
+              </div>
+              <div class="skill-item">
+                <img src="assets/symfony.svg" alt="Symfony" />
+                <span>Symfony</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+                <span>Java</span>
+              </div>
+              <div class="skill-item">
+                <img src="assets/mysql-6.svg" alt="MySQL" />
+                <span>MySQL</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" />
+                <span>SQL Server</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title">Front-end</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" />
+                <span>Vue.js 3</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                <span>React / React Native</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <img src="assets/html-1.svg" alt="HTML5" />
+                <span>HTML5</span>
+              </div>
+              <div class="skill-item">
+                <img src="assets/css-3.svg" alt="CSS3" />
+                <span>CSS3</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" />
+                <span>Sass</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title">Outils &amp; Cloud</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+                <span>Git / GitHub</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+                <span>Docker</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" />
+                <span>AWS</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+                <span>Figma</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="Visual Studio" />
+                <span>Visual Studio</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
 
-    <div id="a-propos" class="title">
-      <h2>A propos</h2>
-      <div class="image-flex">
-        <div class ="head">
-        <div class="matete">
+    <!-- ═══════════════════════ EXPÉRIENCE ═══════════════════════ -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Mon <span class="accent">parcours</span></h2>
+        <div class="experience-grid">
+
+          <!-- ── Expériences professionnelles ── -->
+          <div class="exp-col">
+            <h3 class="exp-subtitle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+              <span class="accent">Expériences professionnelles</span>
+            </h3>
+            <div class="timeline">
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2025 – 2026</span>
+                  <h3>Développeur Full-Stack</h3>
+                  <h4>Goweb · Mission client Mondial Relay</h4>
+                  <ul>
+                    <li>Développement Full-Stack pour le client Mondial Relay</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>C#</span><span>.NET</span><span>Vue.js</span><span>SQL Server</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2025 · CDI</span>
+                  <h3>Développeur Full-Stack</h3>
+                  <h4>Goweb · Roubaix</h4>
+                  <ul>
+                    <li>Poste en CDI au sein de la société Goweb</li>
+                    <li>Développement d'applications web Full-Stack</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>C#</span><span>.NET</span><span>Vue.js</span><span>Docker</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2023 – 2025 · Alternance</span>
+                  <h3>Développeur Back-end</h3>
+                  <h4>Goweb · Roubaix</h4>
+                  <ul>
+                    <li>Développement Back-end en alternance avec la CDA</li>
+                    <li>APIs, bases de données, maintenance applicative</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>C#</span><span>.NET Core</span><span>SQL Server</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2023</span>
+                  <h3>Développeur — Application mobile</h3>
+                  <h4>UGUEST</h4>
+                  <ul>
+                    <li>Création d'une application mobile pour la société UGUEST</li>
+                    <li>Interface React Native + API Symfony</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>React Native</span><span>Symfony</span><span>API REST</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2023 · DWWM</span>
+                  <h3>Projets fil rouge — Formation</h3>
+                  <h4>M2i Lille</h4>
+                  <ul>
+                    <li>Site e-commerce (Symfony) et réseau social</li>
+                    <li>Site de présentation de produits avec React</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>Symfony</span><span>React</span><span>MySQL</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2022 · Stage</span>
+                  <h3>Stagiaire développeur web</h3>
+                  <h4>Nurserie Numérique (AFPA)</h4>
+                  <ul>
+                    <li>Stage sur les métiers du numérique et du web</li>
+                    <li>Création d'un site web en HTML, CSS et JavaScript</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2020 – 2021</span>
+                  <h3>Technicien Hydraulique</h3>
+                  <h4>EDHD · Cappelle-la-Grande &amp; Lille</h4>
+                  <ul>
+                    <li>Maintenance de systèmes hydrauliques industriels</li>
+                    <li>Intervention terrain, diagnostic et réparation</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>Hydraulique</span><span>Mécanique</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ── Formations ── -->
+          <div class="exp-col" id="formation">
+            <h3 class="exp-subtitle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span class="accent">Formations scolaires</span>
+            </h3>
+            <div class="timeline">
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot timeline-dot--edu"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2023 – 2025</span>
+                  <h3>Concepteur Développeur d'Application (CDA)</h3>
+                  <h4>2I TECH · Lille</h4>
+                  <ul>
+                    <li>Titre professionnel niveau 6 (Bac+3/4)</li>
+                    <li>Architecture logicielle, .NET, Vue.js, Docker, AWS</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>CDA</span><span>Titre Pro niv. 6</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot timeline-dot--edu"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2022 – 2023</span>
+                  <h3>Développeur Web et Web Mobile (DWWM)</h3>
+                  <h4>M2i · Lille</h4>
+                  <ul>
+                    <li>Titre professionnel niveau 5 (Bac+2)</li>
+                    <li>HTML, CSS, JS, PHP, Symfony, SQL</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>DWWM</span><span>Titre Pro niv. 5</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot timeline-dot--edu"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2022</span>
+                  <h3>Nurserie Numérique</h3>
+                  <h4>AFPA</h4>
+                  <ul>
+                    <li>Initiation aux métiers du numérique et du web</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>Numérique</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot timeline-dot--edu"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2019 – 2020</span>
+                  <h3>Licence Pro Maintenance &amp; Technologie</h3>
+                  <h4>IUT de Béthune</h4>
+                  <ul>
+                    <li>Systèmes pluri techniques, parcours hydraulique industrielle</li>
+                    <li>Formation en alternance</li>
+                  </ul>
+                  <div class="timeline-tags">
+                    <span>Bac+3</span><span>Alternance</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot timeline-dot--edu"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2017 – 2019</span>
+                  <h3>BTS Assistant Technique d'Ingénieur (ATI)</h3>
+                  <h4>Lycée Gustave Eiffel · Armentières</h4>
+                  <div class="timeline-tags">
+                    <span>BTS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-dot timeline-dot--edu"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2017</span>
+                  <h3>Baccalauréat Pro Maintenance des Équipements Industriels</h3>
+                  <h4></h4>
+                  <div class="timeline-tags">
+                    <span>Bac Pro</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
-        <div class="description">
-          <p>Je me présente, Fares 23 ans, dans le monde du développement web depuis 1 ans.</p>
-          <p>
-            Je suis en reconversion professionnelle après 3 ans dans le domaine de l'hydraulique industrielle. J'ai
-            toujours été passionné par le numérique, j'ai construit mon premier ordinateur à l'âge de 10 ans, sur lequel
-            je m'amusais à faire du montage vidéo, des jeux. Je suis également pilote de drone FPV, un drone que j'ai
-            construit moi-même avec les composants et que j'ai ensuite paramétré sur l'ordinateur.
-          </p>
-          <p>
-            Sans m'en rendre compte j'ai toujours grandi dans le milieu numérique avec un père informaticien. Cette
-            année je me suis lancer ! j'ai fait une formation développeur web et web mobile avec M2i. j'ai pu me rendre
-            compte que j'aimais vraiment le développement web et web mobile et je voudrais continuer ma lancée sur une
-            CDA (concepteur développeur d'application).
-          </p>
+    </section>
+
+    <!-- ═══════════════════════ PROJETS ═══════════════════════ -->
+    <section id="projects" class="section section-dark">
+      <div class="container">
+        <h2 class="section-title">Mes <span class="accent">projets</span></h2>
+        <div class="projects-grid">
+
+          <div class="project-card reveal">
+            <div class="project-header">
+              <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <div class="project-links">
+                <a href="https://github.com/KoWyNx" target="_blank" aria-label="Code source">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Application UGUEST</h3>
+            <p class="project-desc">Application mobile développée pour la société UGUEST. Interface React Native connectée à une API Symfony. Gestion de contenu et expérience utilisateur pensée mobile-first.</p>
+            <div class="project-tags">
+              <span>React Native</span><span>Symfony</span><span>API REST</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-header">
+              <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              <div class="project-links">
+                <a href="https://github.com/KoWyNx" target="_blank" aria-label="Code source">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Laxar — E-commerce</h3>
+            <p class="project-desc">Site e-commerce de vente de montres réalisé en équipe (projet fil rouge DWWM). Panier, paiement, admin, filtrage produits, responsive. Maquette Figma, MCD, gestion Trello &amp; GitHub.</p>
+            <div class="project-tags">
+              <span>PHP</span><span>Symfony</span><span>MySQL</span><span>Figma</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-header">
+              <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              <div class="project-links">
+                <a href="https://github.com/KoWyNx" target="_blank" aria-label="Code source">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Réseau social — Formation</h3>
+            <p class="project-desc">Réseau social web développé en formation DWWM. Gestion de profils, publications, système d'amis et flux d'actualités. Projet en équipe avec Symfony et MySQL.</p>
+            <div class="project-tags">
+              <span>Symfony</span><span>MySQL</span><span>HTML/CSS</span><span>JS</span>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
 
-    <h2 class="title-competence">Compétence</h2>
-    <div class="reveal">
-      <div class="competence-bg" id="competence">
-        <div id="logoo" class="logo-competence">
-          <div class="logo-flex">
-            <img class="image" src="/assets/html-1.svg" alt="" />
-            <h5>HTML</h5>
-          </div>
-          <div class="logo-flex">
-            <img class="image" src="/assets/css-3.svg" alt="" />
-            <h5>CSS</h5>
-          </div>
-          <div class="logo-flex">
-            <img class="image" src="/assets/javascript-1.svg" alt="" />
-            <h5>JS</h5>
-          </div>
-          <div class="logo-flex">
-            <img class="image" src="/assets/react-2.svg" alt="" />
-            <h5>React</h5>
-          </div>
+    <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+    <section id="contact" class="section">
+      <div class="container container--narrow">
+        <h2 class="section-title">Me <span class="accent">contacter</span></h2>
+        <p class="contact-sub">Une opportunité ? Un projet ? Envoie-moi un message, je réponds sous 24h.</p>
+        <div data-fs-success class="form-success" style="display:none">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          <p>Message envoyé ! Je te réponds très vite.</p>
         </div>
+        <div data-fs-error class="form-error-global"></div>
 
-        <div class="logo-competence">
-          <div class="logo-flex">
-            <img class="image" src="/assets/react-native-1.svg" alt="" />
-            <h5>React native</h5>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" placeholder="Jean Dupont" required data-fs-field />
+              <span data-fs-error="name" class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jean@exemple.com" required data-fs-field />
+              <span data-fs-error="email" class="field-error"></span>
+            </div>
           </div>
-          <div class="logo-flex">
-            <img class="image" src="/assets/php-1.svg" alt="" />
-            <h5>PHP</h5>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Opportunité / Collaboration / Question" data-fs-field />
           </div>
-          <div class="logo-flex">
-            <img class="image" src="/assets/symfony.svg" alt="" />
-            <h5>Symfony</h5>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Bonjour Fares, ..." required data-fs-field></textarea>
+            <span data-fs-error="message" class="field-error"></span>
           </div>
-          <div class="logo-flex">
-            <img class="image" src="/assets/mysql-6.svg" alt="" />
-            <h5>SQL</h5>
-          </div>
-        </div>
-        <div class="logo-flex">
-          <img class="images" src="/assets/wordpress-blue.svg" alt="" />
-          <h5>Wordpress</h5>
+          <button type="submit" class="btn-primary btn-full" data-fs-submit-btn>Envoyer le message</button>
+        </form>
+        <div class="contact-alts">
+          <a href="mailto:fberrani@hotmail.fr" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            fberrani@hotmail.fr
+          </a>
+          <a href="https://www.linkedin.com/in/faresber/" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div>
-      <h2 class="experience">Expérience</h2>
-      <div>
-          <h4 class="project">Mes projets :</h4>
+    <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+    <footer>
+      <div class="container">
+        <p>Conçu &amp; développé par <strong>Fares Berrani</strong> · 2026 · Lille</p>
       </div>
-      <h5 class="project">
-        Site e-commerce :
-      </h5>
-      <div class="project">
-        Le projet Laxar est un projet « fil rouge ». Il couvre la majeure partie des compétences abordées pendant la formation exigée pour le passage du titre professionnel Développeur Web et Web Mobile.
-        Le projet a été réalisé en groupe. Laxar est un site d'e-commerce où l’on peut acheter des montres, nous avons réparti les tâches avec Trello, nous avons effectué la maquette du site sur figma et le modèle conceptuel des données (MCD). les modules les plus importants sont fonctionnels (panier, payement, admin, filtrage des montres, page d’accueil dynamique, responsive, contact). Nous nous sommes partagé le travail tout en nous aidant mutuellement en cas de besoin. Nous avons utilisé git et un dépôt privé sur github pour versionner le projet.
-      </div>
-      <div></div>
-    </div>
+    </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="../js/script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
-      integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
-      crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script>
+      window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+      formspree('initForm', { formElement: '#contactForm', formId: 'mlgaraja' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   </body>
 </html>
